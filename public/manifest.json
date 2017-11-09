@@ -1,15 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Horeca",
+  "name": "Horeca Mobile",
+  //"start_url": "./index.html",  
+  "start_url": "/?utm_source=homescreen",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "standalone", /*fullscreen standalone*/
+  "background_color": "#FAFAFA",
+  "theme_color": "#1566ea"
 }
