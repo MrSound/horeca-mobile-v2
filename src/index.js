@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/bootstrap.css';
+import './css/font-awesome.css';
+import './css/horeca.css';
 import registerServiceWorker from './registerServiceWorker';
+
+import SighIn from './components/authenticate/SignIn';
 
 // console.log(process.env.NODE_ENV);
 // console.log(process.env.PUBLIC_URL);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<SighIn />, document.getElementById('root'));
 registerServiceWorker();
