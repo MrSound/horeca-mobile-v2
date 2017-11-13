@@ -1,15 +1,18 @@
 import React from 'react';
+import { Button, Container, Row, Col } from 'reactstrap';
 import '../../css/signin.css';
 
 class Signin extends React.Component {
     render() {
         return (
-            <div className="padding">
-                <div className="row">
-                    <div className="col-lg-12">
+            <Container className="signin-padding">
+                <Row>
+                    <Col lg="12">
                         <h3 className="font-horeca font-color-white font-head"><label>Sign In</label></h3>
-                    </div>
-                    <div className="col-lg-12">
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="12">
                         <div className="form-group">
                             <label className="font-horeca font-color-white font-label-signin">
                                 Email Address
@@ -18,8 +21,10 @@ class Signin extends React.Component {
                                 className="form-control font-horeca input-lg font-color-white input-signin"
                                 placeholder="chef@horeca.com" type="text" />
                         </div>
-                    </div>
-                    <div className="col-lg-12">
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="12">
                         <div className="form-group">
                             <label className="font-horeca font-color-white font-label-signin">
                                 Password
@@ -28,16 +33,18 @@ class Signin extends React.Component {
                                 className="form-control font-horeca input-lg font-color-white input-signin"
                                 type="text" />
                         </div>
-                    </div>
-                    <div className="col-lg-12 text-center">
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="12" className="text-center">
                         <div className="form-group">
-                            <button type="button" className="btn btn-lg font-kanit btn-login">
-                                <a className="smart-underline font-horeca"><b>Sign in to my account</b></a>
-                            </button>
+                            <Button color="info" className="btn-login">
+                                <a className="smart-underline font-color-white font-horeca"><b className="font-color-white">Sign in to my account</b></a>
+                            </Button>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </Col>
+                </Row>
+            </Container >
         );
     }
 }

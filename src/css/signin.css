@@ -1,13 +1,17 @@
 body{
-    background:#3E5CA4;
+    background:rgb(53, 84, 156);
 }
-.padding{
+.signin-padding{
     padding: 20px;
+    margin: 0px;
+    max-width: 100%;
 }
 .btn-login {
     margin-top:20px;
     background-color:#76A6CA;
     border:unset;
+    font-size: 18px;
+    padding:10px 16px 10px 16px;
 }
 .btn-login:hover {
     background-color:rgb(93, 148, 187);
@@ -21,11 +25,12 @@ body{
     font-size: 18px;
     margin-bottom: 0px;
 }
-.input-signin{
+.input-signin,.input-signin:focus{
     background-color: transparent; 
     border: unset;
     border-radius:0px;
     border-bottom: 1px solid #fff;
     font-size: 17px;
     height: 35px;
+    color:#fff;
 }
