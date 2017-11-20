@@ -1,17 +1,10 @@
-body{
+/* body{
     background:rgb(53, 84, 156);
-}
+} */
 .signin-padding{
     padding: 20px;
     margin: 0px;
     max-width: 100%;
-}
-.btn-login {
-    margin-top:20px;
-    background-color:#76A6CA;
-    border:unset;
-    font-size: 18px;
-    padding:10px 16px 10px 16px;
 }
 .btn-login:hover {
     background-color:rgb(93, 148, 187);
@@ -25,7 +18,7 @@ body{
     font-size: 18px;
     margin-bottom: 0px;
 }
-.input-signin,.input-signin:focus{
+.input-signin,.input-signin:focus,.input-signin:hover{
     background-color: transparent; 
     border: unset;
     border-radius:0px;
@@ -33,4 +26,35 @@ body{
     font-size: 17px;
     height: 35px;
     color:#fff;
+}
+.btn-login {
+    margin-top:10px;
+    background-color:#76A6CA;
+    border:unset;
+    font-size: 18px;
+    padding:10px 16px 10px 16px;
+}
+.show_notify{
+    margin: 5px 0px 0px 0px;
+    padding: 8px;
+}
+.icon_notify{
+    font-size:16px;
+    color:#FF6600;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+/* textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus*/ { 
+    color:#fff;
+    font-size: 17px;
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(53, 84, 156) inset;
+    transition: background-color 5000s ease-in-out 0s;
 }

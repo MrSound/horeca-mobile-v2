@@ -1,0 +1,37 @@
+/* body{
+    background:rgb(156, 53, 58);
+} */
+.foot-menu{
+    display: flex;
+    border-top:1px solid #ddd;
+    padding:0px;
+    background-color:#fff;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.foot-menu > div{
+    text-align:center;
+    padding:7px;
+    font-size:12px;
+    cursor:pointer;
+}
+.foot-menu  div.icons{
+    font-size:20px;
+}
+.foot-menu label{
+    margin-top:5px;
+    font-weight:unset;
+    margin-bottom:0px;
+}
+.foot-menu > div:not(:last-child){
+    border-right:1px solid #ddd;
+}
+.foot-menu > div.active{
+    border-top:4px solid #4D8EDE;
+    color:#4D8EDE;
+}
+.foot-menu > div:not(.active){
+    border-top:4px solid #fff;
+}
