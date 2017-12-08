@@ -9,18 +9,18 @@ class CustomerList extends React.Component {
         return (
             <div style={{ display: 'flex', flexDirection: 'column', }}>
                 <div>
-                    <CustomerListItem />1
-                    <CustomerListItem />2
-                    <CustomerListItem />3
-                    <CustomerListItem />4
-                    <CustomerListItem />5
-                    <CustomerListItem />6
-                    <CustomerListItem />7
-                    <CustomerListItem />8
-                    <CustomerListItem />8
-                    <CustomerListItem />8
-                    <CustomerListItem />8
-                    <CustomerListItem />8
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
+                    <CustomerListItem />
                 </div>
             </div>
         );

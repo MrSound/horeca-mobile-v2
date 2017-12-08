@@ -12,7 +12,7 @@ class SKUListItem extends React.Component {
             <Container style={{ padding: 0, }}>
                 <Row className="item-list" style={{ margin: 0, }}>
                     <Col lg="3" md="3" sm="3" xs="3" className="img-sku">
-                        <img src="./images/sku_003.jpg" className="img-circle" alt="Cinque Terre" width="80px" height="80px" />
+                        <img src="./images/sku_003.jpg" className="img-circle" alt="Cinque Terre" width="80px" height="60px" />
                     </Col>
                     <Col lg="9" md="9" sm="9" xs="9">
                         <div className="label-item">Name 1</div>
