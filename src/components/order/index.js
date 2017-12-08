@@ -2,6 +2,7 @@ import React from 'react';
 
 import BottomNavMenu from '../bottom/BottomNavigationMenu';
 import SearchBar from '../util/SearchBar';
+import ShowCustName from '../util/ShowCustName';
 import SKUList from '../order/SKUList';
 import SubMenu from './SubMenu';
 
@@ -10,12 +11,13 @@ class Order extends React.Component {
         document.body.style.backgroundColor = '#FFF';
         return (
             <div>
-                <SearchBar subMenuHeight={104}>
+                <SearchBar subMenuHeight={137}>
+                    <ShowCustName />
                     <SubMenu />
                 </SearchBar>
                 <SKUList />
                 <BottomNavMenu activeMenu={1} />
-            </div>
+            </div >
         );
     }
 }
