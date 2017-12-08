@@ -1,5 +1,5 @@
 export const initialStateAuth = {
-    role: 'SHOP',
+    role: '',
     authenticated: false,
     user_data: {
         full_name: '',

@@ -65,6 +65,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
+body {    
+    font-family: 'Apercu','kanitlight','thaisanslite',Tahoma,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 .font-horeca{
     font-family: 'Apercu','kanitlight','thaisanslite',Tahoma,sans-serif;
     -webkit-font-smoothing: antialiased;

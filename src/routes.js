@@ -1,5 +1,6 @@
-import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from 'react';
+
 // Auth
 import CheckAuth from './components/authenticate/CheckAuth'
 import SignIn from './components/authenticate/SignIn'
@@ -10,6 +11,7 @@ import SignIn from './components/authenticate/SignIn'
 // import ItemDetail from './components/shop/ItemDetail'
 // import BottomNavMenu from './components/BottomNavigationMenu';
 import Customer from './components/customer';
+import Order from './components/order';
 
 export default (
     <BrowserRouter >
@@ -22,7 +24,8 @@ export default (
                     <Route path='/catalog' component={CheckAuth(Catalog)} />
                     <Route path='/itemDetail' component={CheckAuth(ItemDetail)} />
                 </App> */}
-                <Route path='/customer' component={Customer} exact />
+                <Route path='/order' component={CheckAuth(Order)} exact />
+                <Route path='/customer' component={CheckAuth(Customer)} exact />
             </Switch>
         </div>
     </BrowserRouter>

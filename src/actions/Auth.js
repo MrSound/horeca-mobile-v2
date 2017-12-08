@@ -10,16 +10,15 @@ axios.defaults.baseURL = API_URL;
 export function signinUser({ username, password }, push) {
     return (dispatch) => {
         // Submit username and password to server
-        // dispatch({ type: AUTH_USER });
-        // browserHistory.push('/catalog');
         axios.post(`/auth/signin`, { username, password })
             .then(res => {
                 // If request is good
                 // - Update state to indicate user in authenticated
-                dispatch({ type: AUTH_USER });
+                dispatch({ type: AUTH_USER, payload: res.data.role_id });
                 //dispatch(fetchUserData(push));
                 // - Save the JWT token
                 localStorage.setItem('token', res.data.token);
+                dispatch(fetchUserData(push));
                 // - Redirect to the route '/feature'
                 push('/customer');
             }).catch(function (err) {
@@ -30,6 +29,28 @@ export function signinUser({ username, password }, push) {
             });
     }
 };
+
+export const checkAuth = (push) => {
+    return (dispatch) => {
+        axios.get(`/user`, {
+            params: {
+                token: localStorage.getItem('token')
+            }
+        }).then(res => {
+            // If request is good
+            // - Update state to indicate user in authenticated
+            dispatch({ type: AUTH_USER, payload: res.data.role_id });
+            //dispatch(fetchUserData(push));
+            // - Save the JWT token
+            localStorage.setItem('token', res.data.token);
+            // - Redirect to the route '/feature'
+        }).catch(function (err) {
+            // If request is bad
+            alert(err.response.data);
+            push('/signin');
+        });
+    }
+}
 
 export const fetchUserData = (push) => {
     return function (dispatch) {
@@ -46,7 +67,7 @@ export const fetchUserData = (push) => {
             // If request is bad
             alert(err.response.data);
             var status_code = err.response.status.toString().substring(0, 1);
-            if(status_code==="4") push('/signin');
+            if (status_code === "4") push('/signin');
             else push('/catalog');
         });
     }

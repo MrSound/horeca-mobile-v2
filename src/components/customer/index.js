@@ -1,19 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
-import { withRouter } from "react-router-dom";
-import BottomNavMenu from '../BottomNavigationMenu';
 
-class Customers extends React.Component {
+import BottomNavMenu from '../bottom/BottomNavigationMenu';
+import CustomerList from './CustomerList';
+import SearchBar from '../util/SearchBar';
+
+class Customer extends React.Component {
     render() {
         document.body.style.backgroundColor = '#FFF';
         return (
             <div>
-                <div>customer</div>
-                <BottomNavMenu />
+                <SearchBar />
+                <CustomerList />
+                <BottomNavMenu activeMenu={3} />
             </div>
         );
     }
 }
 
-export default Customers;
+export default Customer;

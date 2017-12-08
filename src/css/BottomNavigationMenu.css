@@ -2,18 +2,21 @@
     background:rgb(156, 53, 58);
 } */
 .foot-menu{
-    display: flex;
-    border-top:1px solid #ddd;
-    padding:0px;
-    background-color:#fff;
-    position:fixed;
     bottom:0;
     left:0;
     right:0;
+    position:fixed;
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-top:1px solid #ddd;
+    padding:0px;
+    background-color:#fff;
+    z-index: 100;
 }
 .foot-menu > div{
     text-align:center;
-    padding:7px;
+    padding:3px;
     font-size:12px;
     cursor:pointer;
 }

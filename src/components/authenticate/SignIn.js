@@ -1,9 +1,11 @@
-import React from 'react';
 import { Button, Container, Row, Col, FormGroup, Alert, } from 'reactstrap';
-import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux';
-import * as actions from '../../actions';
+import { Field, reduxForm } from 'redux-form'
 import { withRouter } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+
+import * as actions from '../../actions';
 
 import '../../css/SignIn.css';
 
@@ -108,7 +110,7 @@ class Signin extends React.Component {
                         <Col lg="12" className="text-center">
                             <FormGroup>
                                 <Button color="info" className="btn-login"
-                                    disabled={(pristine || submitting)}>
+                                    disabled={(pristine || submitting) && false}>
                                     {/* smart-underline */}
                                     <a className="font-color-white font-horeca"><b className="font-color-white">Sign in to my account</b></a>
                                 </Button>
@@ -127,8 +129,8 @@ function mapStateToProps(state) {
         role: state.auth.role,
         errorMessage: state.auth.error,
         initialValues: {
-            // username: "admin",
-            // password: "1234",
+            username: "admin",
+            password: "1234",
             // username: "b@b.com",
             // password: "secret",
         },
