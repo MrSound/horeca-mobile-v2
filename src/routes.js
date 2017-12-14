@@ -12,6 +12,7 @@ import SignIn from './components/authenticate/SignIn'
 // import BottomNavMenu from './components/BottomNavigationMenu';
 import Customer from './components/customer';
 import Order from './components/order';
+import More from './components/more';
 
 export default (
     <BrowserRouter >
@@ -26,6 +27,7 @@ export default (
                 </App> */}
                 <Route path='/order' component={CheckAuth(Order)} exact />
                 <Route path='/customer' component={CheckAuth(Customer)} exact />
+                <Route path='/more' component={CheckAuth(More)} exact />
             </Switch>
         </div>
     </BrowserRouter>

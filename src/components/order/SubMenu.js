@@ -15,9 +15,10 @@ class SubMenu extends React.Component {
     render() {
         let btnAllSKU = classNames({ 'icon-list-active': (this.state.btnActive === 1) ? true : false, });
         let btnFavSKU = classNames({ 'icon-favorite-active': (this.state.btnActive === 2) ? true : false, });
+        /*FCFCFC */
         return (
             <div>
-                <Container style={{ padding: "10px 0px 0px 20px", backgroundColor: "#FCFCFC", zIndex: 2, }}>
+                <Container style={{ padding: "10px 0px 0px 20px", backgroundColor: "#FCF9FF", zIndex: 2, }}>
                     <Row>
                         <Col lg="3" style={{ textAlign: 'center', padding: 0, }}>
                             <div onClick={() => { this.setState({ btnActive: 1 }); }}>

@@ -11,7 +11,7 @@ class Order extends React.Component {
         document.body.style.backgroundColor = '#FFF';
         return (
             <div>
-                <SearchBar subMenuHeight={137}>
+                <SearchBar subMenuHeight={134}>
                     <ShowCustName />
                     <SubMenu />
                 </SearchBar>

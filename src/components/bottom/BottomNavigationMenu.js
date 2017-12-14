@@ -59,7 +59,7 @@ class BottomNavigationMenu extends React.Component {
                     </Col>
                     <Col lg="3"
                         className={subMenu_4}
-                        onClick={() => { this.menuActive(4, ""); }}
+                        onClick={() => { this.menuActive(4, "more"); }}
                     >
                         <div className="icons"><i className="fa fa-rss" aria-hidden="true"></i></div>
                         <label>More</label>
