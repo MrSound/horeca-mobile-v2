@@ -1,7 +1,10 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { confirmable } from 'react-confirm';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import * as actions from '../actions';
 
 class Confirmation extends React.Component {
     render() {
@@ -12,7 +15,7 @@ class Confirmation extends React.Component {
             confirmation,
             show,
             proceed,
-            dismiss,
+            // dismiss,
             cancel,
             enableEscape = true,
           } = this.props;
@@ -22,9 +25,6 @@ class Confirmation extends React.Component {
             >
                 <Modal
                     isOpen={show}
-                    // toggle={this.toggle}
-                    // className={this.props.className}
-                    // backdrop="static"
                     //onHide={dismiss}
                     backdrop={enableEscape ? true : 'static'}
                     keyboard={enableEscape}
@@ -57,3 +57,13 @@ Confirmation.propTypes = {
 }
 
 export default confirmable(Confirmation);
+
+// export default confirmable(connect(
+//     state => ({ screen_resolution: state.common.screen_resolution })
+//     , actions
+// )(Confirmation));
+
+// export default confirmable(connect(
+//     state => ({ screen_resolution: state.common.screen_resolution })
+//     , actions
+// )(Confirmation));

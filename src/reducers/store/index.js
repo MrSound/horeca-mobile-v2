@@ -14,6 +14,14 @@ export const initialStateAuth = {
     },
 };
 
+export const initialStateCommon = {
+    displayLoading: true,
+    screen_resolution: {
+        width: 0,
+        height: 0,
+    }
+}
+
 export const initialStateShop = {
     showTab: {
         on: 1,

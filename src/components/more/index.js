@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Container, Row, Col, } from 'reactstrap';
 import { Link } from 'react-router-dom'
-import React, { Component } from 'react';
+import React from 'react';
 
 import * as actions from '../../actions';
 import BottomNavMenu from '../bottom/BottomNavigationMenu';
@@ -53,8 +53,8 @@ class More extends React.Component {
                         textAlign: 'Left', padding: "15px 15px 15px 25px",
                         fontSize, fontWeight: 300,
                     }}>{
-                            path !== null
-                            && <Link to={`/${path}`} onClick={() => { if (func != null) func() }}>{menuName}</Link>
+                            (path !== null
+                            && <Link to={`/${path}`} onClick={() => { if (func != null) func() }}>{menuName}</Link>)
                             || menuName
                         }
                     </Col>

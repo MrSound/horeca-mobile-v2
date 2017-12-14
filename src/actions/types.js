@@ -36,3 +36,5 @@ export const CLEAR_DEFAULT_CUSTOMER = 'CLEAR_DEFAULT_CUSTOMER';
 //--------------- Common ------------------//
 export const STATUS_LOADING = 'STATUS_LOADING';
 export const STATUS_LOADED = 'STATUS_LOADEDs';
+export const SET_SCREEN_RESOLUTION = 'SET_SCREEN_RESOLUTION';
+//--------------- Common ------------------//

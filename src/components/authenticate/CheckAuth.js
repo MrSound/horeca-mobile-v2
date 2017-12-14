@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
-import * as actions from '../../actions';
+import React, { Component } from 'react';
 
+import * as actions from '../../actions';
 
 export default function (ComposedComponent) {
     class Authentication extends Component {
-        static contextTypes = {
-            router: PropTypes.object
-        }
         componentWillMount() {
             this.props.checkAuth(this.props.history.push);
             if (!this.props.authenticated) {

@@ -4,6 +4,9 @@ import React from 'react';
 // Auth
 import CheckAuth from './components/authenticate/CheckAuth'
 import SignIn from './components/authenticate/SignIn'
+
+
+import DetchResolution from './components/util/DetectResolution'
 // import SignOut from './components/auth/SignOut'
 // App
 // import App from './components/App';
@@ -18,16 +21,16 @@ export default (
     <BrowserRouter >
         <div>
             <Switch>
-                <Route path='/' component={SignIn} exact />
-                <Route path='/signin' component={SignIn} exact />
+                <Route path='/' component={DetchResolution(SignIn)} exact />
+                <Route path='/signin' component={DetchResolution(SignIn)} exact />
                 {/* <Route path='/signout' component={SignOut} exact />
                 <App>
                     <Route path='/catalog' component={CheckAuth(Catalog)} />
                     <Route path='/itemDetail' component={CheckAuth(ItemDetail)} />
                 </App> */}
-                <Route path='/order' component={CheckAuth(Order)} exact />
-                <Route path='/customer' component={CheckAuth(Customer)} exact />
-                <Route path='/more' component={CheckAuth(More)} exact />
+                <Route path='/order' component={CheckAuth(DetchResolution(Order))} exact />
+                <Route path='/customer' component={CheckAuth(DetchResolution(Customer))} exact />
+                <Route path='/more' component={CheckAuth(DetchResolution(More))} exact />
             </Switch>
         </div>
     </BrowserRouter>

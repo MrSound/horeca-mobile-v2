@@ -6,14 +6,14 @@ import { reducer as formReducer } from 'redux-form'
 import { combineReducers } from 'redux';
 //import searchReducer from './Search';
 //import shopReducer from './Shop';
-//import commonReducer from './Common';
+import commonReducer from './Common';
   
   const appReducer  = combineReducers({
+    common: commonReducer,
     auth: authReducer,
     form: formReducer,     // <---- Mounted at 'form'
     // search: searchReducer,
     // shop: shopReducer,
-    // common: commonReducer,
   });
   
   const rootReducer = (state, action) => {
