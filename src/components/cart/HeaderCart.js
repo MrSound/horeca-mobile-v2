@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import React from 'react';
 import styled from 'styled-components';
@@ -11,7 +10,7 @@ const Header = ({
     Link,
     IconClose,
 }) => {
-    const Thing = () => (
+    const head = () => (
         <Wrapper className="row">
             <Left className="col-4 text-left">
                 <Link to="/order">
@@ -22,7 +21,7 @@ const Header = ({
             <Right className="col-4 text-right">Clear Cart</Right>
         </Wrapper >
     );
-    return Thing;
+    return head;
 }
 
 const ThemedHeader = Header({

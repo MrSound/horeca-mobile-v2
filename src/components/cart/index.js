@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import * as actions from '../../actions';
 
 import HeaderCart from './HeaderCart'
+import FooterCart from './FooterCart'
 
 const CartContainer = styled.div`
     height:100vh;
@@ -20,7 +21,7 @@ class Cart extends React.Component {
         return (
             <CartContainer>
                 <HeaderCart />
-                Short Cart
+                <FooterCart />
             </CartContainer>
         );
     }
