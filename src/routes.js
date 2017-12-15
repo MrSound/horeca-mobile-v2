@@ -16,6 +16,7 @@ import DetchResolution from './components/util/DetectResolution'
 import Customer from './components/customer';
 import Order from './components/order';
 import More from './components/more';
+import Cart from './components/cart';
 
 export default (
     <BrowserRouter >
@@ -31,6 +32,7 @@ export default (
                 <Route path='/order' component={CheckAuth(DetchResolution(Order))} exact />
                 <Route path='/customer' component={CheckAuth(DetchResolution(Customer))} exact />
                 <Route path='/more' component={CheckAuth(DetchResolution(More))} exact />
+                <Route path='/cart' component={CheckAuth(DetchResolution(Cart))} exact />
             </Switch>
         </div>
     </BrowserRouter>
