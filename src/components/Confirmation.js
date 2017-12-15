@@ -1,10 +1,11 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { confirmable } from 'react-confirm';
-import { connect } from 'react-redux';
+
+// import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import * as actions from '../actions';
+// import * as actions from '../actions';
 
 class Confirmation extends React.Component {
     render() {
